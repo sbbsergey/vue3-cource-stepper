@@ -29,7 +29,7 @@
           </li>
         </ul>
         <div>
-          <div v-if="!isFinish">
+          <template v-if="!isFinish">
             <button class="btn"
                     @click="prev()"
                     :disabled="isPrevDisabled"
@@ -37,7 +37,7 @@
             <button class="btn primary"
                     @click="nextOfFinish()"
             >{{ isLastStep ? 'Закончить' : 'Вперед'}}</button>
-          </div>
+          </template>
           <button v-else
                   class="btn"
                   @click="reset()"
